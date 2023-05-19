@@ -1,3 +1,4 @@
+//code to demo the custum progress ring 
 import { LightningElement } from 'lwc';
 
 export default class CustumDataTableCheck extends LightningElement {
