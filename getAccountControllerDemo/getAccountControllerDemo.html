@@ -1,0 +1,49 @@
+<template>
+  <!--  <lightning-card title="Retriving data using Apex using Function">
+        <div class="slds-var-m-around_medium">
+            <template if:true={accountList}>
+                <template for:each={accountList} for:item="account">
+                        <div class="slds-box slds-var-m-around_medium" key={account.Id}>
+                           <p> {account.Name}</p>
+                           <p> {account.Industry}</p>
+                           <p> {account.Rating}</p>
+                        </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+-->
+<!--
+    <lightning-card title="Retriving data using Apex using Property">
+        <div class="slds-var-m-around_medium">
+            <template if:true={accounts.data}>
+                <template for:each={accounts.data} for:item="account">
+                        <div class="slds-box slds-var-m-around_medium" key={account.Id}>
+                           <p> {account.Name}</p>
+                           <p> {account.Industry}</p>
+                           <p> {account.Rating}</p>
+                        </div>
+                </template>
+            </template>
+            <template if:true={accounts.error}>
+                <p> Error fetching data {accounts.error}</p>
+            </template>
+        </div>
+    </lightning-card>
+-->
+
+  <lightning-card title="Retriving data using Apex using Function based on Rating">
+        <div class="slds-var-m-around_medium">
+            <template if:true={accountList}>
+                <template for:each={accountList} for:item="account">
+                        <div class="slds-box slds-var-m-around_medium" key={account.Id}>
+                           <p> {account.Name}</p>
+                           <p> {account.Industry}</p>
+                           <p> {account.Rating}</p>
+                        </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+
+</template>

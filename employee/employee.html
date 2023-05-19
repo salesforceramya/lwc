@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Employee Details">
+        <div class="slds-var-m-around_medium">
+            <lightning-input label="Enter the salary" onchange={empdetails}></lightning-input>
+            <template for:each={newArray} for:item="newArray">
+                <li key={newArray.name}>
+                    {newArray.name}, {newArray.salary} , {newArray.position}
+                </li>
+            </template>
+            <!--{newArray.name}
+            {newArray.salary}
+            {newArray.position}
+            {narray}-->
+        </div> 
+    </lightning-card>
+</template>

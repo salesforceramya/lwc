@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="getPicklistValue Wire Function Demo">
+        <template if:true={industryOptions}>
+            <lightning-combobox
+            name="Industry"
+            label="Select Industry"
+            value={value}
+            options={industryOptions}
+            onchange={handleChange} >
+        </lightning-combobox>
+    <p>Selected value is: {value}</p>
+        </template>
+        <div>
+            <lightning-button variant="Brand" label="Get Info" onclick={handleClick}></lightning-button>
+          
+        </div>
+    </lightning-card>
+</template>

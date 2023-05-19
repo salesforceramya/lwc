@@ -1,0 +1,18 @@
+<template>
+    <lightning-card  title="Simple Calculator"> 
+        <div class="slds-p-around_small">
+            <lightning-input label = "Input#1" name = "value1" type = "Number" value = {numb1} onchange={ChangeHandler}></lightning-input>
+            <lightning-input label = "Input#2" name = "value2" type = "Number" value = {numb2} onchange={ChangeHandler}></lightning-input>
+        </div>
+        <div class="slds-m-top_small slds-m-bottom_medium">
+            <lightning-button variant="Brand" label="Add" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="Brand" label="Sub" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="Brand" label="Mul" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="Brand" label="Div" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="Brand" label="Clear" onclick={handleClear} type="reset" class="slds-m-left_x-small"></lightning-button>
+        </div>
+        <div class="slds-m-top_small slds-m-bottom_medium ">
+            <b>Answer = {result}</b>
+       </div>
+    </lightning-card>
+</template>

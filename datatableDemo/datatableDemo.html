@@ -1,0 +1,32 @@
+
+<template>
+    <lightning-card title="Datatable Demo" class="slds-var-m-around_medium">
+        <lightning-button label="Get Selected Rows" variant="brand" onclick={handleClick}></lightning-button>
+        <div class="slds-var-m-around_medium">
+            <lightning-datatable
+            key-field="id"
+            columns={columnsList}
+            data={accountsList}
+            onsave={handleSave}
+            draft-values={saveDraftValues}
+            >
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+
+
+    
+    <!-- <div class="slds-var-m-around_medium">
+            <lightning-datatable
+            key-field="id"
+            columns={columnsList}
+            data={accountsList}
+            max-row-selection="1"
+            hide-checkbox-column="true"
+            show-row-number-column="true"
+            row-number-offset="1"
+            onrowselection={handleSelect}
+            onrowaction={handleRowAction}
+            >
+            </lightning-datatable>-->
+</template>

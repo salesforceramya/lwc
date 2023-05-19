@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Display Records based on Rating">
+        <div class="slds-box slds-var-m-around_medium">
+            <lightning-combobox
+            name="Rating"
+            label="Rating"
+            value={value}
+            options={options}
+            placeholder="Select Rating"
+            onchange={handleChange} >
+        </lightning-combobox>
+        </div>
+        <div>
+            <template if:true={accountList}>
+                <template for:each={accountList} for:item="account">
+                    <div class="slds-box slds-var-m-around_medium" key={account.Id}>
+                        <p> Name : {account.Name}</p>
+                        <p> Industry : {account.Industry}</p>
+                        <p> Rating : {account.Rating}</p>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+    
+</template>

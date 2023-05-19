@@ -1,0 +1,25 @@
+<template>
+    <lightning-card>
+
+        <template for:each={fruits} for:item="fruit">
+            <div key={fruit}>
+                {fruit}
+            </div>
+        </template>
+
+        <template for:each={employees} for:item="emp">
+            <div key={emp.name}>
+                {emp.name}
+                {emp.salary}
+            </div>
+        </template>
+        <!--
+        <lightning-button name="btn" label="Button 1" onclick={changeHandler}></lightning-button>
+        <template if:true={isShow}>
+            Welcome to AJ Skill Dev
+        </template>
+        <template if:false={isShow}>
+            Thanks for visiting
+        </template>-->
+    </lightning-card>
+</template>

@@ -1,0 +1,33 @@
+<template>
+    <lightning-card>
+        <div class="slds-grid slds-wrap">
+            <template for:each={employees} for:item="employee">
+                <div key={employee.Name} class="slds-col slds-size_1-of-2">
+                    <img src={employee.Photo}  alt={employee.Name} class="image-size"/>
+                    <div class="slds-col"> 
+                        Name:{employee.Name} <br/>
+                        Email:{employee.Email}
+                    </div>
+                </div>
+            </template>
+        </div>
+        <lightning-button variant="brand" label="EmployeeInfo" title="titleName" onclick={handleClick}>
+        </lightning-button>
+
+        <div class="search">
+            <lightning-input label="Search Employee" id="search" onchange={handleSearch}></lightning-input>
+           </div>
+
+           <div>
+            <template if:true={currentEmployee}>
+                <h2>{currentEmployee.Name}</h2>
+                <img    src={currentEmployee.Photo}  alt={currentEmployee.Name} class="image-size"/>
+            
+                <p>{currentEmployee.Email}</p>
+            </template>
+
+            <button onclick={handlePrevious}>Previous</button>
+            <button onclick={handleNext}>Next</button>
+</div>
+    </lightning-card>
+</template>

@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Data Table with Delete Action">
+        <lightning-datatable
+        key-field="id"
+        columns={columnsList}
+        data={accountsList}
+        onrowaction={handleRowAction}
+        >
+        </lightning-datatable>
+    </lightning-card>
+</template>
