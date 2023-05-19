@@ -1,3 +1,4 @@
+//Demonstrate of custum column in Data Table with progress ring
 import { LightningElement } from 'lwc';
 
 import lightningDataTable from 'lightning/datatable';
