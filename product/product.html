@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Product Details">
+        <div class="slds-var-m-around_medium">
+            <lightning-input label="Enter the stock" name="text" value={product.stock} onchange={changeHandler}></lightning-input><br/>
+            <div>
+                <template if:true={isStock}>
+                    {msg}
+                </template>
+                <template if:false={isStock}>
+                    {product.stock}<br/>
+                    {product.name}<br/>
+                    {product.price}
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>

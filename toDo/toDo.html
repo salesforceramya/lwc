@@ -1,0 +1,31 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card title="To Do List">
+        <lightning-layout>
+            <lightning-layout-item padding="around-small" size="12">
+                <ul class="slds-has-dividers_around-space">
+                    <template for:each={todoTasks} for:item="todoTask">
+                         <li class="slds-item" key={todoTask.id}>
+                            <lightning-layout vertical-align="center" horizontal-align="spread">
+                                <lightning-layout-item padding="horizontal-small">
+                                    {todoTask.name} 
+                                </lightning-layout-item>
+                            </lightning-layout>
+                        </li>
+                    </template>
+                </ul>
+        </lightning-layout-item>
+    </lightning-layout>
+        <p slot="footer">
+            <lightning-layout pull-to-boundary="medium">
+                <lightning-layout-item padding="horizontal-large" flexibility="grow">
+                    <lightning-input type="text" label="New Task" variant="label-hidden" value={newTask} onchange={updateNewtask} placeholder="Enter Task"></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item padding="horizontal-large">
+                    <lightning-button variant="brand" label="Add" onclick={addTask}></lightning-button>
+                </lightning-layout-item>
+            </lightning-layout>
+        </p>
+    </lightning-card>
+</template>

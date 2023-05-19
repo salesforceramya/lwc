@@ -1,0 +1,11 @@
+<template>
+   <lightning-card title="Parent Child Component Communication">
+    <template for:each={employees} for:item="employee">
+        <div key={employee.id}>
+            <c-child-component employee={employee}>
+
+            </c-child-component>
+        </div>
+    </template>
+   </lightning-card> 
+</template>

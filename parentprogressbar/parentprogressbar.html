@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="Progress Bar Child to Parent Communication">
+        <div><!--Parent to Child when we click start handleClick event occurs-->
+            <lightning-button label="Start" onclick={handleClick} variant="brand"></lightning-button>
+        </div>
+        <c-childprogressbar onprogressfinished={handleFinish} progress={progress}></c-childprogressbar>
+    </lightning-card>
+</template>

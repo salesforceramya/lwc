@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Slider - Parent to Child Communication">
+        <lightning-input label="Set Slider Value" onchange={handleChange}></lightning-input>
+        <c-childslider maxsliderval={maxsliderval} slidervalue={slidervalue}></c-childslider>
+
+        <div slot="actions">
+            <lightning-button label="Reset" variant="brand" onclick={handleClick}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

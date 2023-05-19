@@ -1,0 +1,17 @@
+<template>
+    <lightning-card variant="Narrow" title="Search Accounts">
+        <div class="slds-var-m-around_medium">
+            <lightning-input label="Account Name" onchange={handleChange}></lightning-input>
+            <lightning-button label="Search" variant="Brand" onclick={handleSearch}></lightning-button>
+        </div>
+        <div>
+            <template for:each={accountList} for:item='account'>
+                <div class="slds-box slds-var-m-around_medium" key={account.id}>
+                    Account Name : {account.Name} <br/>
+                    Billing Sate : {account.billingState} <br/>
+                    Annual Revenue : {account.AnnualRevenue}
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
